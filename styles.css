@@ -1,0 +1,154 @@
+*,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Montserrat";
+    font-weight: bold;
+    background: hsl(210, 36%, 96%);
+    line-height: 1.5;
+    background-image: url(images/images.jpg);
+    background-size: cover;
+}
+
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+nav {
+    background: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.nav-toggle {
+    font-size: 1.5rem;
+    color: black;
+    background: transparent;
+    border-color: transparent;
+    transition: all 0.3s linear;
+    cursor: pointer;
+}
+
+.nav-toggle:hover {
+    color: brown;
+    transform: rotate(90deg);
+}
+
+.logo {
+    height: 40px;
+}
+
+.links a {
+    color: hsl(209, 34%, 30%);
+    font-size: 1rem;
+    text-transform: capitalize;
+    letter-spacing: 0.25rem;
+    display: block;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s linear;
+}
+
+.links a:hover {
+    background: hsl(205, 86%, 81%);
+    color: rgb(204, 46, 46);
+    padding-left: 1.5rem;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: left;
+    padding: 0 1rem;
+    gap: 2rem;
+    height: 0;
+    overflow: hidden;
+    transition: all 0.3s linear;
+}
+.social-icons a{
+    color: black;
+    min-width: 300px;
+}
+ul.social-icons.show-links{
+    height: auto;
+}
+.social-icons a:hover{
+    color: brown;
+}
+
+.links {
+    height: 0;
+    overflow: hidden;
+    transition: all 0.3s linear;
+}
+
+.show-links {
+    height: 10rem;
+}
+
+@media (min-width: 800px) {    
+    .nav-container {
+        max-width: 1170px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem;
+    }
+
+    .nav {
+        padding: 0;
+    }
+
+    .nav-toggle {
+        display: none;
+    }
+
+    .links {
+        height: auto;
+        display: flex;
+    }
+
+    .links a {
+        padding: 0 1rem;
+        margin: 0 0.5rem;
+    }
+
+    .links a:hover {
+        padding: 0 1rem;
+        margin: 0 0.5rem;
+        text-decoration: underline;
+        background: transparent;
+    }
+
+    .social-icons {
+        display: flex;
+        justify-content: right;
+        gap: 1rem;
+        height: auto;
+    }
+
+    .social-icons a {
+        margin: 0 0.5rem;
+        color: black;
+        transition: all 0.3s linear;
+    }
+
+    .social-icons a:hover {
+        color: burlywood;
+    }
+}
